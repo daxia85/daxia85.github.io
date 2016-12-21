@@ -338,8 +338,11 @@
       
         
           
-            <p>Yii2.0中，关于with多种用法的操作 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Yii2.0中，关于with多种用法的操作 Yii2.0中，关于with多种用法的操作 </div><div class="line">Yii2.0中，关于with多种用法的操作 Yii2.0中，关于with多种用法的操作 Yii2.0中，关于with多种用法的操作</div></pre></td></tr></table></figure>
+            <p>[Yii2.0中，关于with多种用法的操作]</p>
+<p>我发现，源码上面说了好几种with的使用方法，在这里总结一下【如有错误，请大家帮忙更正，我会及时更改的】</p>
+<p>下面我描述下具体的语境：</p>
+<p>关联关系：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">product表关联的bussiness      product.bussiness_id  &lt;=&gt; bussiness.id</div><div class="line">product关联business_admin    product.business_id   &lt;=&gt;  business_admin</div><div class="line">bussiness表关联district表     bussiness.company_province &lt;=&gt; district.id</div></pre></td></tr></table></figure>
           
         
       
