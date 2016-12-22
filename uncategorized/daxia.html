@@ -84,31 +84,28 @@
 
 
 
-<meta name="description" content="我发现，源码上面说了好几种with的使用方法，在这里总结一下【如有错误，请大家帮忙更正，我会及时更改的】下面我描述下具体的语境：
-关联关系：
+<meta name="description" content="with
 
-Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— 维基百科
+我发现，源码上面说了好几种with的使用方法，在这里总结一下【如有错误，请大家帮忙更正，我会及时更改的】
 
-代码块12345678910@requires_authorizationdef somefunc(param1">
+关联关系：123product表关联的bussiness      product.bussiness_id  &amp;lt;=&amp;gt; bussiness.idproduct关联business_admin    product.business_id   &amp;lt;=&amp;gt;  bu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Yii2.0中，关于with多种用法的操作">
 <meta property="og:url" content="http://daxia.club/uncategorized/daxia.html">
 <meta property="og:site_name" content="大霞的博客">
-<meta property="og:description" content="我发现，源码上面说了好几种with的使用方法，在这里总结一下【如有错误，请大家帮忙更正，我会及时更改的】下面我描述下具体的语境：
-关联关系：
+<meta property="og:description" content="with
 
-Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— 维基百科
+我发现，源码上面说了好几种with的使用方法，在这里总结一下【如有错误，请大家帮忙更正，我会及时更改的】
 
-代码块12345678910@requires_authorizationdef somefunc(param1">
-<meta property="og:updated_time" content="2016-12-22T08:10:31.000Z">
+关联关系：123product表关联的bussiness      product.bussiness_id  &amp;lt;=&amp;gt; bussiness.idproduct关联business_admin    product.business_id   &amp;lt;=&amp;gt;  bu">
+<meta property="og:updated_time" content="2016-12-22T08:13:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Yii2.0中，关于with多种用法的操作">
-<meta name="twitter:description" content="我发现，源码上面说了好几种with的使用方法，在这里总结一下【如有错误，请大家帮忙更正，我会及时更改的】下面我描述下具体的语境：
-关联关系：
+<meta name="twitter:description" content="with
 
-Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— 维基百科
+我发现，源码上面说了好几种with的使用方法，在这里总结一下【如有错误，请大家帮忙更正，我会及时更改的】
 
-代码块12345678910@requires_authorizationdef somefunc(param1">
+关联关系：123product表关联的bussiness      product.bussiness_id  &amp;lt;=&amp;gt; bussiness.idproduct关联business_admin    product.business_id   &amp;lt;=&amp;gt;  bu">
 
 
 
@@ -340,12 +337,11 @@ Markdown 是一种轻量级标记语言，它允许人们使用易读易写的�
       
 
       
-        <h2 id="我发现，源码上面说了好几种with的使用方法，在这里总结一下【如有错误，请大家帮忙更正，我会及时更改的】"><a href="#我发现，源码上面说了好几种with的使用方法，在这里总结一下【如有错误，请大家帮忙更正，我会及时更改的】" class="headerlink" title="我发现，源码上面说了好几种with的使用方法，在这里总结一下【如有错误，请大家帮忙更正，我会及时更改的】"></a>我发现，源码上面说了好几种with的使用方法，在这里总结一下【如有错误，请大家帮忙更正，我会及时更改的】</h2><p>下面我描述下具体的语境：</p>
-<p>关联关系：</p>
+        <p>with</p>
 <blockquote>
-<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— <a href="https://zh.wikipedia.org/wiki/Markdown" target="_blank" rel="external">维基百科</a></p>
+<p>我发现，源码上面说了好几种with的使用方法，在这里总结一下【如有错误，请大家帮忙更正，我会及时更改的】</p>
 </blockquote>
-<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@requires_authorization</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">somefunc</span><span class="params">(param1=<span class="string">''</span>, param2=<span class="number">0</span>)</span>:</span></div><div class="line">    <span class="string">'''A docstring'''</span></div><div class="line">    <span class="keyword">if</span> param1 &gt; param2: <span class="comment"># interesting</span></div><div class="line">        <span class="keyword">print</span> <span class="string">'Greater'</span></div><div class="line">    <span class="keyword">return</span> (param2 - param1 + <span class="number">1</span>) <span class="keyword">or</span> <span class="keyword">None</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></div><div class="line">    <span class="keyword">pass</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>message = <span class="string">'''interpreter</span></div><div class="line"><span class="meta">... </span>prompt'''</div></pre></td></tr></table></figure>
+<h3 id="关联关系："><a href="#关联关系：" class="headerlink" title="关联关系："></a>关联关系：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">product表关联的bussiness      product.bussiness_id  &lt;=&gt; bussiness.id</div><div class="line">product关联business_admin    product.business_id   &lt;=&gt;  business_admin</div><div class="line">bussiness表关联district表     bussiness.company_province &lt;=&gt; district.id</div></pre></td></tr></table></figure>
 <h3 id="LaTeX-公式"><a href="#LaTeX-公式" class="headerlink" title="LaTeX 公式"></a>LaTeX 公式</h3><p>可以创建行内公式，例如 $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$。或者块级公式：</p>
 <p>$$    x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
 <h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><table>
@@ -552,7 +548,7 @@ Markdown 是一种轻量级标记语言，它允许人们使用易读易写的�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#我发现，源码上面说了好几种with的使用方法，在这里总结一下【如有错误，请大家帮忙更正，我会及时更改的】"><span class="nav-number">1.</span> <span class="nav-text">我发现，源码上面说了好几种with的使用方法，在这里总结一下【如有错误，请大家帮忙更正，我会及时更改的】</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码块"><span class="nav-number">1.1.</span> <span class="nav-text">代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LaTeX-公式"><span class="nav-number">1.2.</span> <span class="nav-text">LaTeX 公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表格"><span class="nav-number">1.3.</span> <span class="nav-text">表格</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#关联关系："><span class="nav-number">1.</span> <span class="nav-text">关联关系：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LaTeX-公式"><span class="nav-number">2.</span> <span class="nav-text">LaTeX 公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表格"><span class="nav-number">3.</span> <span class="nav-text">表格</span></a></li></ol></div>
             
 
           </div>
